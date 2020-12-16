@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.netinfoapp",
+    package = "com.hkar19.netinfochecker",
 )
 
 android_resource(
     name = "res",
-    package = "com.netinfoapp",
+    package = "com.hkar19.netinfochecker",
     res = "src/main/res",
 )
 

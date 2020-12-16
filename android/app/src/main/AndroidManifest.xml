@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.netinfoapp">
+  package="com.hkar19.netinfochecker">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
