@@ -16,6 +16,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* netinfoappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* netinfoappTests.m */; };
+		6540A94025939CD60045C448 /* AppCenter-Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6540A93F25939CD50045C448 /* AppCenter-Config.plist */; };
 		679BF7F07E135C5EA52B0B52 /* libPods-netinfoapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66152F5CF04DCE1FE59EE18C /* libPods-netinfoapp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C9C2BA64830109D3814930E2 /* libPods-netinfoapp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE99549D0C3E955DB63117C /* libPods-netinfoapp-tvOSTests.a */; };
@@ -55,6 +56,8 @@
 		2D02E47B1E0B4A5D006451C7 /* netinfoapp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "netinfoapp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* netinfoapp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "netinfoapp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAEE3E64BB36C425238CDA2 /* libPods-netinfoapp-netinfoappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-netinfoapp-netinfoappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6528F4F5258A57A300AF08F5 /* netinfoapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = netinfoapp.entitlements; path = netinfoapp/netinfoapp.entitlements; sourceTree = "<group>"; };
+		6540A93F25939CD50045C448 /* AppCenter-Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "AppCenter-Config.plist"; path = "netinfoapp/AppCenter-Config.plist"; sourceTree = "<group>"; };
 		66152F5CF04DCE1FE59EE18C /* libPods-netinfoapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-netinfoapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = netinfoapp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1BA17572E5C2701D8E81B63 /* Pods-netinfoapp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-netinfoapp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-netinfoapp-tvOS/Pods-netinfoapp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 		13B07FAE1A68108700A75B9A /* netinfoapp */ = {
 			isa = PBXGroup;
 			children = (
+				6528F4F5258A57A300AF08F5 /* netinfoapp.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -174,6 +178,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				6540A93F25939CD50045C448 /* AppCenter-Config.plist */,
 				13B07FAE1A68108700A75B9A /* netinfoapp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* netinfoappTests */,
@@ -342,6 +347,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				6540A94025939CD60045C448 /* AppCenter-Config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,11 +661,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_ENTITLEMENTS = netinfoapp/netinfoapp.entitlements;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 94264ZVBMG;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = netinfoapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -679,10 +687,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_ENTITLEMENTS = netinfoapp/netinfoapp.entitlements;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 94264ZVBMG;
 				INFOPLIST_FILE = netinfoapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
